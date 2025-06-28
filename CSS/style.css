@@ -57,11 +57,8 @@ button {
   margin: 0 auto;
 }
 @media (max-width: 600px) {
-  body {
-    padding: 0 40px;
-  }
   .container {
-    width: 100%;
+    width: 320px;
   }
 }
 
@@ -211,6 +208,8 @@ header .social {
   height: 381px;
   right: -30%;
   top: 14%;
+  z-index: -1;
+
 }
 .landing img {
   width: 55%;
@@ -265,10 +264,10 @@ header .social {
     margin-top: 40px;
   }
   .landing .container::after {
-    width: 87%;
-    height: 234px;
-    right: -26%;
-    top: 8%;
+    width: 99%;
+    height: 216px;
+    right: -46%;
+    top: 6%;
   }
   .landing img {
     width: 100%;
@@ -624,7 +623,7 @@ header .social {
 
 /* questions start */
 .questions-section {
-  margin: 180px 0 140px;
+  margin: 180px 0 130px;
 }
 .questions-section h2 {
   color: var(--blue-950);
@@ -738,3 +737,121 @@ header .social {
   }
 }
 /* questions end */
+
+
+/* contact start */
+.contact {
+  background-color: var(--blue-600);
+  color: white;
+  text-align: center;
+  padding: 80px 0;
+}
+.contact .container {
+  width: 500px;
+}
+.contact p {
+  font-weight: 500;
+  letter-spacing: 5px; 
+}
+.contact h2 {
+  font-size: 36px;
+  margin: 52px 0;
+  font-weight: 500;
+}
+.contact form {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  position: relative;
+}
+.contact input {
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--grey-50);
+  padding: 18px 26px;
+  font-size: 16px;
+  font-weight: 500;
+  caret-color: var(--blue-600);
+  border: 3px solid var(--grey-50);
+  transition: .3s;
+  width: 360px;
+  font-family: "Rubik", sans-serif;
+  position: relative;
+  z-index: 1;
+}
+.contact button {
+  color: white;
+  background-color: var(--red-400);
+  padding: 0 20px;
+  text-transform: capitalize;
+  border: 2px solid var(--red-400);
+}
+.contact button:hover {
+  background-color: white;
+  color: var(--red-400);
+}
+form.error input {
+  border: 3px solid var(--red-400);
+}
+form .error-message {
+  background-color: var(--red-400);
+  color: white;
+  font-weight: 500;
+  font-style: italic;
+  width: 360px;
+  position: absolute;
+  border-radius: 0 0 6px 6px;
+  bottom: 2px;
+  left: 0;
+  transition: .3s;
+  font-size: 13px;
+  padding: 16px 20px;
+  text-align: start;
+  padding: 8px 20px 8px;
+}
+form.error .error-message {
+  transform: translateY(100%);
+}
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 60px 0 50px;
+  }
+  .contact .container {
+    width: 320px;
+  }
+  .contact p {
+    font-weight: 14px;
+    letter-spacing: 4px; 
+  }
+  .contact h2 {
+    font-size: 31px;
+    margin: 40px 0;
+  }
+  .contact form {
+    flex-direction: column;
+    gap: 16px;
+    transition: .3s;
+  }
+  .contact form.error {
+    gap: 46px;
+  }
+  .contact input {
+    padding: 14px 20px;
+    font-size: 14px;
+    width: 100%;
+  }
+  .contact button {
+    font-size: 14px;
+    padding: 14px;
+  }
+  form .error-message {
+    width: 100%;
+    bottom: unset;
+    font-size: 11px;
+    padding: 10px 14px;
+    top: 18px;
+  }
+}
+/* contact end */
