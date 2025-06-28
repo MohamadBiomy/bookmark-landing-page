@@ -402,6 +402,7 @@ header .social {
 .feature h3 {
   color: var(--blue-950);
   font-size: 36px;
+  font-weight: 500;
 }
 .feature p {
   color: #aaaacc;
@@ -505,3 +506,117 @@ header .social {
   }
 }
 /* features section end */
+
+
+/* extensions start */
+.extensions {
+  margin-top: 110px;
+}
+.extensions h2 {
+  color: var(--blue-950);
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 38px;
+}
+.extensions h2 + p {
+  width: 49%;
+  margin: auto;
+  line-height: 1.5;
+  font-size: 18px;
+  text-align: center;
+  color: #aaaacc;
+}
+.extensions .container {
+  display: flex;
+  align-items: start;
+  gap: 30px;
+  width: 900px;
+  margin-top: 80px;
+}
+.extensions .extension {
+  flex: 1;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 2px 4px 26px 2px #c9cdf06f;
+  padding: 24px;
+  transform: translateY(calc(var(--space, 0) * 26px));
+  position: relative;
+}
+.extension::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 90px;
+  background-image: url("../images/bg-dots.svg");
+  background-repeat: no-repeat;
+}
+.extension img {
+  width: 84px;
+}
+.extension h4 {
+  color: var(--blue-950);
+  font-size: 20px;
+  font-weight: 500;
+  margin: 26px 0 8px;
+}
+.extension p {
+  color: #aaaacc;
+  margin-bottom: 70px;
+}
+.extension button {
+  color: white;
+  background-color: var(--blue-600);
+  width: 100%;
+  border: 2px solid var(--blue-600);
+  font-size: 14px;
+  padding: 13px;
+}
+.extension button:hover {
+  color: var(--blue-600);
+  background-color: white;
+}
+
+@media (max-width: 600px) {
+  .extensions {
+    margin-top: 80px;
+  }
+  .extensions h2 {
+    margin-bottom: 14px;
+    font-size: 26px;
+  }
+  .extensions h2 + p {
+    width: 90%;
+    font-size: 15px;
+  }
+  .extensions .container {
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .extensions .extension {
+    width: 280px;
+    transform: translateY(0);
+  }
+  .extension::after {
+    bottom: 86px;
+  }
+  .extension img {
+    width: 76px;
+  }
+  .extension h4 {
+    font-size: 18px;
+    margin: 26px 0 4px;
+  }
+  .extension p {
+    margin-bottom: 60px;
+    font-size: 15px;
+  }
+  .extension button {
+    font-size: 12px;
+    padding: 11px;
+  }
+}
+/* extensions end */
