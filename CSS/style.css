@@ -1,0 +1,186 @@
+:root {
+  --blue-600: #5368df;
+  --red-400: #fa5757;
+  --grey-50: #f7f7f7;
+  --blue-950: #252b46;
+  --text-color: #3a3a44;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  position: relative;
+}
+
+/* global styles */
+img {
+  width: 100%;
+}
+.overlay {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+.blue {
+  opacity: .9;
+  background-color: var(--blue-950);
+}
+/* container */
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 0 24px;
+  }
+}
+
+
+/* header start */
+header .container {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo {
+  width: 200px;
+}
+header .links {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+header .links.show {
+  display: flex;
+}
+header a {
+  text-decoration: none;
+  color: var(--blue-950);
+  padding: 10px 0;
+  transition: .3s;
+}
+header a:hover {
+  color: var(--red-400);
+}
+header button {
+  outline: none;
+  border: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: var(--red-400);
+  display: block;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: .3s;
+  border: 3px solid var(--red-400);
+  width: 136px;
+  padding: 15px 0;
+  letter-spacing: inherit;
+}
+header button:hover {
+  color: var(--red-400);
+  background-color: white;
+} 
+header #burger-menu {
+  display: none;
+}
+header .social {
+  display: none;
+}
+
+/* media breakpoints */
+@media (max-width: 600px) {
+  header .container {
+    height: 100px;
+    z-index: 20;
+    position: relative;
+  }
+  header .logo {
+    width: 130px;
+  }
+  header .links {
+    position: fixed;
+    flex-direction: column;
+    gap: 0;
+    letter-spacing: 3px;
+    top: 100px;
+    left: 0;
+    width: 100vw;
+    font-weight: 400;
+    padding-top: 22px;
+    transition: .3s;
+    display: none;
+    height: calc(100vh - 100px);
+  }
+  header a {
+    color: white;
+    padding: 22px 0;
+    position: relative;
+  }
+  header button {
+    margin-top: 22px;
+    font-size: 15px;
+    font-weight: 400;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    width: 160px;
+    padding: 15px 0;
+    border-radius: 6px;
+    position: relative;
+  }
+  header .links > *:not(.social):after {
+    content: "";
+    background-color: white;
+    border-radius: 2px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -1px;
+    width: 184px;
+  }
+  header button:hover {
+    color: var(--red-400);
+    border-color: var(--red-400);
+    background-color: transparent;
+  } 
+  header button::after {
+    top: -27px !important;
+  }
+  header #burger-menu {
+    display: block;
+    width: 18px;
+  }
+  header .social {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+    font-size: 20px;
+  }
+}
+/* header end */
