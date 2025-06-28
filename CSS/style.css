@@ -620,3 +620,121 @@ header .social {
   }
 }
 /* extensions end */
+
+
+/* questions start */
+.questions-section {
+  margin: 180px 0 140px;
+}
+.questions-section h2 {
+  color: var(--blue-950);
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 38px;
+}
+.questions-section h2 + p {
+  width: 49%;
+  margin: auto;
+  line-height: 1.5;
+  font-size: 18px;
+  text-align: center;
+  color: #aaaacc;
+}
+.questions {
+  margin: 90px auto 0;
+  width: 660px;
+}
+.question {
+  border-top: 2px solid #d2d2e691;
+  overflow: hidden;
+  transition: .3s;
+}
+.question:last-of-type {
+  border-bottom: 2px solid #d2d2e691;
+}
+.question p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 24px 0;
+}
+.question:not(.active) p:hover span {
+  color: var(--red-400);
+}
+.question p span {
+  transition: .3s;
+}
+.question i {
+  transition: .3s;
+}
+.question.active i {
+  color: var(--red-400);
+  rotate: 180deg;
+}
+.question:not(.active) p {
+  cursor: pointer;
+}
+.question .answer {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: .3s;
+  color: #aaaacc;
+  line-height: 1.5;
+  padding: 0 0;
+}
+.question.active .answer {
+  max-height: 200px;
+  opacity: 1;
+  padding: 14px 0 22px;
+}
+.questions-section button {
+  color: white;
+  background-color: var(--blue-600);
+  border: 2px solid var(--blue-600);
+  text-transform: capitalize;
+  font-size: 14px;
+  padding: 14px 20px;
+  margin: 32px auto 0;
+  display: block;
+}
+.questions-section button:hover {
+  color: var(--blue-600);
+  background-color: white;
+}
+@media (max-width: 600px) {
+  .questions-section {
+    margin: 60px 0 40px;
+  }
+  .questions-section h2 {
+    margin-bottom: 14px;
+    font-size: 26px;
+  }
+  .questions-section h2 + p {
+    width: 80%;
+    font-size: 15px;
+  }
+  .questions {
+    margin: 60px auto 0;
+    width: 300px;
+  }
+  .question p {
+    font-size: 17px;
+    gap: 12px;
+    padding: 20px 0;
+  }
+  .question .answer {
+    font-size: 14px;
+  }
+  .question.active .answer {
+    max-height: 240px;
+    padding: 8px 0 20px;
+  }
+  .questions-section button {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+}
+/* questions end */

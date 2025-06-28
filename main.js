@@ -4,6 +4,7 @@ const linksDiv = document.querySelector("header .links")
 const burger = document.getElementById("burger-menu")
 const overlay = document.querySelector(".overlay.blue")
 const featuresToggle = document.querySelectorAll(".features-toggle span")
+const questions = document.querySelectorAll(".question > p")
 
 // Variables
 let isMenuExisted = false
@@ -46,5 +47,14 @@ featuresToggle.forEach(span => {
   span.addEventListener("click", () => {
     featuresToggle.forEach(s => s.classList.remove("active"))
     span.classList.add("active")
+  })
+})
+
+
+// Questions
+questions.forEach(ques => {
+  ques.addEventListener("click", () => {
+    questions.forEach(que => que.parentElement.classList.remove("active"))
+    ques.parentElement.classList.add("active")
   })
 })
