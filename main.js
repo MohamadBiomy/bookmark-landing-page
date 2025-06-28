@@ -3,6 +3,8 @@ const logo = document.querySelector("header .logo img")
 const linksDiv = document.querySelector("header .links")
 const burger = document.getElementById("burger-menu")
 const overlay = document.querySelector(".overlay.blue")
+const featuresToggle = document.querySelectorAll(".features-toggle span")
+
 // Variables
 let isMenuExisted = false
 
@@ -36,4 +38,13 @@ window.addEventListener("resize", () => {
 
     isMenuExisted = false
   }
+})
+
+
+// Features toggle
+featuresToggle.forEach(span => {
+  span.addEventListener("click", () => {
+    featuresToggle.forEach(s => s.classList.remove("active"))
+    span.classList.add("active")
+  })
 })
